@@ -16,7 +16,7 @@ struct ContentView: View {
             .onAppear {
                 Task(priority: .medium) {
                     do {
-                        try success(meals: await MockGetMealsCommand().execute(inDTO: MealQueryDTO(mensa: 1, date: Date())))
+                        try success(meals: await MockGetMealsCommand().execute(inDTO: MealQueryDTO(mensa: 42, date: Date())))
                     } catch let error {
                         failure(error: error)
                     }
